@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Lights</title>
+</head>
+<body>
+
+<a-scene light="defaultLightsEnabled: false">
+  <!-- ... -->
+</a-scene>
+
+<input type="button" value="PLAY"  onclick="play()">
+
+</body>
+</html>

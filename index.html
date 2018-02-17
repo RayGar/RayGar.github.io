@@ -28,6 +28,7 @@
         <a-asset-item id="planto" src="assets/Assets/Models/Indoor Pot Plant 3/Low-Poly+Plant_.obj"></a-asset-item>
         <a-asset-item id="planto-mtl" src="assets/Assets/Models/Indoor Pot Plant 3/Low-Poly+Plant_.mtl"></a-asset-item>
         <a-asset-item id="tv" src="assets/Assets/Models/tv/TV.obj"></a-asset-item>
+        <video id="vid" autoplay loop="true" src="mickey.mp4"></video>
 
 
 
@@ -41,8 +42,8 @@
         </a-camera>
     </a-entity>
 
-
-    <a-datgui name="settings" position="0 0 2">
+    <!--
+    <a-datgui name="settings" position="0 2 -1">
         <a-gui-slider id="scaleControl" name="scale" step="0.01" min="0.01" max="4"></a-gui-slider>
         <a-gui-dropdown name="options">
             <a-gui-option value="0">Item 0</a-gui-option>
@@ -50,7 +51,7 @@
         </a-gui-dropdown>
         <a-gui-checkbox name="on or off" default="true"></a-gui-checkbox>
         <a-gui-button name="click me"></a-gui-button>
-    </a-datgui>
+    </a-datgui>-->
 
 
 
@@ -78,8 +79,9 @@
     <!-- My vase, which is meant to be right next to my shelf -->
     <a-entity position="70 2 -17.5" scale="0.015 0.015 0.015" rotation="0 0 0" obj-model="obj: #plant; mtl: #plant-mtl"></a-entity>
     <!-- TV -->
-    <a-entity position="55 1.6 25" scale="0.15 0.15 0.15" rotation="0 90 0" material="color: black" obj-model="obj: #tv; mtl: #tv-material"></a-entity>
-
+    <a-entity position="55 1.6 25" scale="0.15 0.15 0.15" rotation="0 90 0" material="color: black" obj-model="obj: #tv; mtl: #tv-material">
+    <a-video src="#vid" width="50" height="24.75" position="1.5 20.5 0.8" rotation="0 90 0"></a-video>
+    </a-entity>
 
 
     <!-- Ceiling -->
