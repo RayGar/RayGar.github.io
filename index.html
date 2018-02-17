@@ -7,10 +7,11 @@
 <body>
 
 <a-scene>
+    <!-- Preload all my assets -->
     <a-assets>
+
         <audio id="blip1" src="assets/horned_owl.wav"></audio>
-
-
+        <audio id="static" src="assets/radio.wav"></audio>
         <a-asset-item id="pillow" src="assets/Assets/Models/Pillows/Pillows 02.obj"></a-asset-item>
         <a-asset-item id="pillow-material" src="assets/Assets/Models/Pillows/Pillows 02.mtl"></a-asset-item>
         <a-asset-item id="bed" src="assets/Assets/Models/Cama/3d-model.obj"></a-asset-item>
@@ -29,11 +30,12 @@
         <a-asset-item id="planto-mtl" src="assets/Assets/Models/Indoor Pot Plant 3/Low-Poly+Plant_.mtl"></a-asset-item>
         <a-asset-item id="tv" src="assets/Assets/Models/tv/TV.obj"></a-asset-item>
         <video id="vid" autoplay loop="true" src="mickey.mp4"></video>
-
-
-
+        <a-asset-item id="radio" src="assets/Assets/Models/radio/Radio (Lost signal).obj"></a-asset-item>
+        <a-asset-item id="radio-mtl" src="assets/Assets/Models/radio/Radio (Lost signal).mtl"></a-asset-item>
 
     </a-assets>
+
+
     <a-sky color="#ffffff"></a-sky>
     <a-entity position="54 1.5 12">
         <a-camera universal-controls>
@@ -60,8 +62,8 @@
        <a-animation begin="click" attribute="position" from="45 0 6" to= "45 0 -10" dur="3000"></a-animation>
     </a-box>
 
-    <a-box material="color:tomato;transparent:true;opacity:0" depth="2" height="2" width="2" sound="src: url(assets/horned_owl.wav); on: click" class="intersectable" position="55 1.5 6"></a-box>
-    <a-obj-model src="assets/AngryBirdsRedsMask.obj" mtl="assets/AngryBirdsRedsMask.mtl" position="55 1.5 6"></a-obj-model>
+    <a-box material="color:tomato;transparent:true;opacity:0" depth="2" height="2" width="2" sound="src: url(assets/radio.wav); on: click" class="intersectable" position="55 1.5 6"></a-box>
+    <!--<a-obj-model src="assets/AngryBirdsRedsMask.obj" mtl="assets/AngryBirdsRedsMask.mtl" position="55 1.5 6"></a-obj-model>-->
     <a-entity collada-model="url(assets/stormtrooper.dae)" rotation="90 0 0" position="60 0 6" ></a-entity>
 
     <!-- Pillows  I'll get rid of these later but in the mean time it's a proof of concept of how to load models, also I gotta look at how to resize and reposition them-->
@@ -80,8 +82,11 @@
     <a-entity position="70 2 -17.5" scale="0.015 0.015 0.015" rotation="0 0 0" obj-model="obj: #plant; mtl: #plant-mtl"></a-entity>
     <!-- TV -->
     <a-entity position="55 1.6 25" scale="0.15 0.15 0.15" rotation="0 90 0" material="color: black" obj-model="obj: #tv; mtl: #tv-material">
-    <a-video src="#vid" width="50" height="24.75" position="1.5 20.5 0.8" rotation="0 90 0"></a-video>
+        <a-video src="#vid" width="50" height="24.75" position="1.5 20.5 0.8" rotation="0 90 0"></a-video>
+        <!-- Radio -->
+        <a-entity position="130 0 0" scale="0.5 0.5 0.5" rotation="180 180 0" obj-model="obj: #radio; mtl: #radio-mtl"></a-entity>
     </a-entity>
+
 
 
     <!-- Ceiling -->
