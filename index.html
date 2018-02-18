@@ -32,6 +32,10 @@
         <video id="vid" autoplay loop="true" src="mickey.mp4"></video>
         <a-asset-item id="radio" src="assets/Assets/Models/radio/Radio (Lost signal).obj"></a-asset-item>
         <a-asset-item id="radio-mtl" src="assets/Assets/Models/radio/Radio (Lost signal).mtl"></a-asset-item>
+        <a-asset-item id="water" src="assets/Assets/Models/water/Water_Dispenser.obj"></a-asset-item>
+        <a-asset-item id="water-mtl" src="assets/Assets/Models/water/Water_Dispenser.mtl"></a-asset-item>
+        <a-asset-item id="armchair" src="assets/Assets/Models/armchair/Chair(10).obj"></a-asset-item>
+        <a-asset-item id="armchair-mtl" src="assets/Assets/Models/armchair/Chair(2).mtl"></a-asset-item>
 
     </a-assets>
 
@@ -86,8 +90,13 @@
         <a-video src="#vid" width="50" height="24.75" position="1.5 20.5 0.8" rotation="0 90 0"></a-video>
         <!-- Radio -->
         <a-entity position="130 0 0" scale="0.5 0.5 0.5" rotation="180 180 0" obj-model="obj: #radio; mtl: #radio-mtl"></a-entity>
-    </a-entity>
 
+
+    </a-entity>
+    <!-- Water -->
+    <a-entity position="30 0 10" scale="1 1 1" rotation="0 90 0" obj-model="obj: #water; mtl: #water-mtl"></a-entity>
+    <!-- Armchair -->
+    <a-entity position="55 -0.5 17" scale="0.002 0.002 0.002" rotation="0 180 0" obj-model="obj: #armchair; mtl: #armchair-mtl"></a-entity>
 
 
 
@@ -98,6 +107,24 @@ src: url(images/MarbleTiles.jpg); repeat: 20 12"></a-entity>
     <!-- Floor -->
     <a-entity static-body geometry="primitive: box; depth: 50; height: 0.1; width: 80" position="40 -0.5 5" material="shader: flat; side: double; opacity: 1;
 src: url(images/carpet-texture-tile-19.jpg); repeat: 12 5"></a-entity>
+
+
+
+
+    <a-cube
+            color="#0095DD"
+            rotation="20 40 0"
+            position="30 5 0">
+        <a-animation
+                attribute="rotation"
+                from="20 0 0"
+                to="20 360 0"
+                direction="alternate"
+                dur="4000"
+                repeat="indefinite"
+                easing="ease">
+        </a-animation>
+    </a-cube>
 
 
 
@@ -117,7 +144,11 @@ roughness: 1; src: url(images/trim.jpg); repeat: 9 1"></a-entity>
     <!-- Walls  -->
     <!-- wall furthest to the left (relative of the position the camera spawns in -->
     <a-entity static-body geometry="primitive: box; depth: 1; height: 14; width: 50" position="0 6.5 5" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/brick1.jpg); repeat: 4 2"></a-entity>
+roughness: 1; src: url(images/brick1.jpg); repeat: 4 2">
+        <!-- Door -->
+        <a-entity geometry="primitive: plane; height: 8.8; width: 6.2" position="1 -4 0.65" rotation="0 0 0" material="shader: flat; transparent: true;
+        src: url(images/door.jpg)"></a-entity>
+    </a-entity>
     <!-- Wall furthest ti the right -->
     <a-entity static-body geometry="primitive: box; depth: 1; height: 14; width: 50" position="80 6.5 5" rotation="0 90 0" material="shader: standard;
 roughness: 1; src: url(images/brick1.jpg); repeat: 4 2"></a-entity>
@@ -154,25 +185,13 @@ src: url(images/Spy-Pen.png)"></a-entity>
 roughness: 1; src: url(images/mount.jpg); repeat: 1 2"></a-entity>
 
 
-
     <!-- Dr. Jin's portrait -->
     <a-entity geometry="primitive: plane; height: 8.8; width: 6.2" position="34.5 4.5 -18.98" rotation="0 0 0" material="shader: flat; transparent: true;
 src: url(images/Key-Remote-HD.png)"></a-entity>
     <a-entity geometry="primitive: box; depth: 1; height: 11; width: 8" position="34.5 4.2 -19.5" rotation="0 0 0" material="shader: standard;
 roughness: 1; src: url(images/mount.jpg); repeat: 1 2"></a-entity>
 
-
-    <!--<a-entity geometry="primitive: plane; height: 8.8; width: 6.2" position="-45.5 4.5 -18.98" rotation="0 0 0" material="shader: flat; transparent: true;
-src: url(images/tekken7.jpg)"></a-entity>
-    <a-entity geometry="primitive: box; depth: 1; height: 11; width: 8" position="-45.5 4.2 -19.5" rotation="0 0 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg); repeat: 1 2"></a-entity>-->
-
-
     <!-- Dr. Serwada's portrait -->
-    <!--<a-entity geometry="primitive: plane; height: 8.8; width: 6.2" position="10  -18.98" rotation="0 90 0" material="shader: flat; transparent: true;
-src: url(images/Jacket-Hook.png)"></a-entity>
-    <a-entity geometry="primitive: box; depth: 1; height: 11; width: 8" position="10 0 -19.5" rotation="0 90 0" material="shader: standard;
-roughness: 1; src: url(images/mount.jpg); repeat: 1 2"></a-entity>-->
 
     <a-entity geometry="primitive: plane; height: 8.8; width: 6.2" position="34.5 4.5 28.98" rotation="0 180 0" material="shader: flat; transparent: true;
 src: url(images/Jacket-Hook.png)"></a-entity>
