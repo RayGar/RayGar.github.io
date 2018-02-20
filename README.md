@@ -52,6 +52,8 @@ Water Fountain: Author: VisionGear-Studios, Link: https://www.cgtrader.com/free-
 
 Radio sounds: https://freesound.org/people/ERH/sounds/217749/
 
+To trigger them walk up to the walkie-talkie and click on it.
+
 <h1>Libraries:</h1>
 Aframe and ThreeJS
 
@@ -64,7 +66,7 @@ https://idatavisualizationlab.github.io/CS5331-VirtualReality/
 
 <h1>Links to this project</h1>:
 
-live demo: raygar.github.com
+live demo: raygar.github.io
 
 Code repository: https://github.com/RayGar/RayGar.github.io
 
